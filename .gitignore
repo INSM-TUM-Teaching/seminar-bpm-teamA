@@ -1,2 +1,5 @@
 __pycache__/
 temp/
+best_evolved_params.json
+ea_fitness_plot.png
+submission_event_log.csv
