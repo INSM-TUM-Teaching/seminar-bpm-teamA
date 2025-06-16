@@ -2,3 +2,4 @@ __pycache__/
 temp/
 evolution_trend.pkl
 final_population.pkl
+.DS_Store
