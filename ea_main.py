@@ -70,13 +70,13 @@ def evolve_population(population):
     fronts = non_dominated_sort(population)
     for front in fronts:
         calculate_crowding_distance(front)
-    selected = tournament_selection(population)
+    selected = tournament_selection(population) #have N population with ranks 
     new_population = []
-    while len(new_population) < len(population):
+    while len(new_population) < len(population):  #len(new_population) < N: loop will execute (N/2 because 25*2)
         parent1, parent2 = random.sample(selected, 2)
-        child1, child2 = sbx_crossover(parent1, parent2)
-        child1 = polynomial_mutation(child1)
-        child2 = polynomial_mutation(child2)
+        child1, child2 = sbx_crossover(parent1, parent2) #sbx crossover will give 2 offsprings 
+        child1 = polynomial_mutation(child1) #mutation 1
+        child2 = polynomial_mutation(child2) #mutation 2
         new_population.extend([child1, child2])
     return new_population[:len(population)]
 
