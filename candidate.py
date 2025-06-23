@@ -3,13 +3,13 @@ import random
 import numpy as np
 
 # Global definitions
-POPULATION_SIZE = 5
-N_GENERATIONS = 5
-GENE_DIM = 12
+POPULATION_SIZE = 50
+N_GENERATIONS = 50
+GENE_DIM = 12 # parameters
 
-# Define bounds for each gene
-LOWER_BOUNDS = [24, 24] + [0] * 10
-UPPER_BOUNDS = [168, 168] + [1] * 10
+# Define bounds for each gene p1 to p12
+LOWER_BOUNDS = [24, 24] + [0] * 10   #eg: [24, 24, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+UPPER_BOUNDS = [168, 168] + [1] * 10 #e.g.: [168, 168, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
 
 class Candidate:
     def __init__(self, gene=None):
