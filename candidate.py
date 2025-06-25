@@ -3,8 +3,8 @@ import random
 import numpy as np
 
 # Global definitions
-POPULATION_SIZE = 50
-N_GENERATIONS = 50
+POPULATION_SIZE = 5
+N_GENERATIONS = 5
 GENE_DIM = 12 # parameters
 
 # Define bounds for each gene p1 to p12

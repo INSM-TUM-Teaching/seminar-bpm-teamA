@@ -41,6 +41,8 @@ def evaluate_candidate(candidate, simulation_hours=1000):
     problem = HealthcareProblem()
     simulator = Simulator(planner, problem)
     result = simulator.run(simulation_hours)
+    #print(result)
+    #planner.resource_reporter.create_graph(168, 168*4)
     # Expected keys: 'waiting time for_admission', 'waiting_time_in_hospital', 'nervousness', 'personnel_cost'
     wta = result.get('waiting time for_admission', 0)
     wth = result.get('waiting_time_in_hospital', 0)
@@ -169,3 +171,4 @@ if __name__ == "__main__":
             "NERV": evolution_nerv,
             "COST": evolution_cost
         }, f)
+    
